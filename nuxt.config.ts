@@ -105,7 +105,6 @@ export default defineNuxtConfig({
       routes: [
         '/',
         '/sitemap.xml',
-        '/robots.txt',
       ],
     },
   },
@@ -114,6 +113,10 @@ export default defineNuxtConfig({
     isAcceptNecessaryButtonEnabled: false,
     isControlButtonEnabled: true,
     barPosition: 'bottom-full',
+  },
+
+  robots: {
+    robotsTxt: false,
   },
 
   eslint: {
