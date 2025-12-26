@@ -5,9 +5,19 @@
         src="/images/pages/home-hero.jpg"
         width="1200"
         height="800"
+        format="webp"
         fit="cover"
         alt="Puntuale - Problems for your solutions"
         class="w-full h-full object-cover"
+        loading="eager"
+        preload
+        :sizes="'xs:100vw sm:100vw md:100vw lg:100vw xl:100vw'"
+        :srcset="`
+          /images/pages/home-hero.webp 480w,
+          /images/pages/home-hero.webp 768w,
+          /images/pages/home-hero.webp 1024w,
+          /images/pages/home-hero.webp 1200w
+        `"
       />
       <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/50 to-transparent" />
       <div class="absolute inset-0 flex items-center justify-center px-4 py-12">

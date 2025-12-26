@@ -102,10 +102,10 @@
 
         <section class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-12 text-center">
           <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
-            Want to learn more?
+            Stay updated with our latest articles
           </h3>
           <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
-            Subscribe to our newsletter for the latest insights and updates from Puntuale.
+            Subscribe to our newsletter for technology insights, tutorials, and business solutions from Puntuale.
           </p>
           <UInput
             placeholder="Enter your email"

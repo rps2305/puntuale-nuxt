@@ -373,6 +373,12 @@ useHead({
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     { key: 'theme-color', name: 'theme-color', content: color },
   ],
+  link: [
+    {
+      rel: 'preconnect',
+      href: 'https://rps2305.github.io',
+    },
+  ],
   style: [
     {
       innerHTML: 'img { max-width: 100%; height: auto; display: block; }',

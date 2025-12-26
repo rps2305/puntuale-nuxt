@@ -10,7 +10,9 @@
     "postinstall": "nuxt prepare",
     "typecheck": "nuxt typecheck",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "lighthouse": "npx lighthouse https://rps2305.github.io/puntuale-nuxt/ --output=html --output-path=./lighthouse-report.html --only-categories=performance,accessibility,best-practices,seo --throttling-method=devtools --view",
+    "lighthouse:local": "npx lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report-local.html --only-categories=performance,accessibility,best-practices,seo --throttling-method=devtools --view"
   },
   "dependencies": {
     "@dargmuesli/nuxt-cookie-control": "^9.1.11",
