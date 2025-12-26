@@ -155,12 +155,17 @@ export default defineNuxtConfig({
             '@nuxtjs/sitemap': ['@nuxtjs/sitemap'],
           },
         },
+        external: ['@nuxt/kit', '@tailwindcss/oxide'],
       },
       chunkSizeWarningLimit: 1000,
       cssCodeSplit: true,
     },
     optimizeDeps: {
       include: ['@nuxt/ui', '@nuxt/image', '@nuxt/icon'],
+      exclude: ['@tailwindcss/oxide'],
+    },
+    resolve: {
+      dedupe: ['@nuxt/ui', '@nuxt/kit'],
     },
   },
 
