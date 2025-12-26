@@ -1,0 +1,30 @@
+# Security Policy
+
+## Supported Versions
+
+All current versions of this application are supported for security updates.
+
+## Reporting a Vulnerability
+
+If you discover a security vulnerability, please report it responsibly:
+
+- Email: security@example.com
+- Please include details about the vulnerability
+- Allow us time to investigate and respond
+- We will acknowledge receipt within 48 hours
+
+## Security Best Practices
+
+- Do not engage in public disclosure before coordinated fix is released
+- Provide proof-of-concept for vulnerability reproduction
+- Include impact assessment and suggested mitigation
+
+## Response Timeline
+
+- Initial response: Within 48 hours
+- Detailed analysis: Within 7 days
+- Fix deployment: As soon as feasible based on severity
+
+## Security Acknowledgments
+
+We appreciate responsible disclosure and will credit researchers who help improve our security.

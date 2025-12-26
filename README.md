@@ -1,75 +1,154 @@
-# Nuxt Minimal Starter
+# Nuxt 4 Starter Website
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A modern, responsive Nuxt 4 website with blog, products, and team pages. Built with Nuxt 4, Tailwind CSS, and Nuxt UI.
 
-## Setup
+## Features
 
-Make sure to install dependencies:
+- 📄 File-based routing with multiple page types
+- 🎨 Responsive design with Tailwind CSS
+- 📝 Blog with markdown content
+- 🛍️ Products showcase with dynamic routes
+- 👥 Team member profiles
+- 🌙 Dark mode support
+- 🖼️ Optimized images with Nuxt Image
+- 🤖 SEO-friendly with meta tags
+- 🔍 Type-safe with TypeScript
+
+## Prerequisites
+
+- Node.js 18.x or higher
+- pnpm, npm, yarn, or bun
+
+## Installation
 
 ```bash
-# npm
-npm install
+# Clone the repository
+git clone <your-repo-url>
+cd nuxt-app
 
-# pnpm
+# Install dependencies
 pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
+## Development
 
-Start the development server on `http://localhost:3000`:
+Start the development server:
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
 pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+The application will be available at [http://localhost:3000](http://localhost:3000)
 
-Build the application for production:
+## Available Scripts
 
 ```bash
-# npm
-npm run build
+# Development
+pnpm dev              # Start development server
 
-# pnpm
+# Building
+pnpm build            # Build for production
+pnpm generate         # Generate static site
+
+# Preview
+pnpm preview          # Preview production build locally
+
+# Quality Assurance
+pnpm typecheck        # Run TypeScript type checking
+pnpm lint             # Run ESLint
+pnpm lint:fix         # Fix ESLint issues automatically
+```
+
+## Project Structure
+
+```
+nuxt-app/
+├── app/                    # App directory (Nuxt 4)
+│   ├── pages/             # File-based routing
+│   │   ├── blog/          # Blog pages
+│   │   ├── products/      # Product pages with dynamic routes
+│   │   └── team/          # Team member pages
+│   ├── app.vue           # Root component
+│   └── app.css            # Global styles
+├── content/               # Markdown content
+│   ├── blog/             # Blog posts
+│   └── about.md          # About page content
+├── public/                # Static assets
+│   ├── images/           # Image assets
+│   └── products.json     # Product data
+├── server/                # Server routes
+│   └── api/              # API endpoints
+├── components/            # Vue components (auto-imported)
+├── composables/           # Vue composables (auto-imported)
+├── utils/                 # Utility functions (auto-imported)
+├── layouts/               # Layout components
+└── nuxt.config.ts        # Nuxt configuration
+```
+
+## Development Guidelines
+
+See [AGENTS.md](./AGENTS.md) for detailed development guidelines including:
+- Code style conventions
+- Component structure
+- TypeScript best practices
+- API call patterns
+- Import style preferences
+- Git commit conventions
+
+## Configuration
+
+### Environment Variables
+
+Create a `.env` file in the root directory:
+
+```env
+NUXT_PUBLIC_SITE_URL=https://your-site.com
+NUXT_PUBLIC_SITE_NAME=Your Site Name
+```
+
+### Nuxt Modules
+
+This project uses several Nuxt modules:
+- `@nuxt/content` - Content management system
+- `@nuxt/image` - Image optimization
+- `@nuxtjs/tailwindcss` - Tailwind CSS integration
+- `@nuxt/ui` - UI component library
+
+## Deployment
+
+### Static Site Generation
+
+```bash
+pnpm generate
+```
+
+The static files will be generated in `.output/public/` directory.
+
+### Production Build
+
+```bash
 pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
-Locally preview production build:
+### Deployment Platforms
 
-```bash
-# npm
-npm run preview
+This project can be deployed to:
+- Vercel
+- Netlify
+- Cloudflare Pages
+- AWS Amplify
+- Any Node.js hosting platform
 
-# pnpm
-pnpm preview
+See the [Nuxt deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more details.
 
-# yarn
-yarn preview
+## Security
 
-# bun
-bun run preview
-```
+For security vulnerability reporting, see [security.txt](./public/security.txt).
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## License
+
+MIT
+
+## Support
+
+For issues and questions, please open an issue in the repository.
