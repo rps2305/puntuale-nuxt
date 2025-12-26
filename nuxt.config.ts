@@ -25,6 +25,7 @@ export default defineNuxtConfig({
   },
 
   app: {
+    baseURL: '/puntuale-nuxt/',
     head: {
       title: 'Puntuale - Problems for your solutions',
       meta: [
@@ -34,12 +35,12 @@ export default defineNuxtConfig({
         { property: 'og:description', content: 'Innovative solutions for your business problems' },
         { property: 'og:type', content: 'website' },
         { property: 'og:site_name', content: 'Puntuale' },
-        { property: 'og:url', content: 'https://puntuale.nl' },
-        { property: 'og:image', content: 'https://puntuale.nl/logo.svg' },
+        { property: 'og:url', content: 'https://rps2305.github.io/puntuale-nuxt' },
+        { property: 'og:image', content: 'https://rps2305.github.io/puntuale-nuxt/logo.svg' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'Puntuale - Problems for your solutions' },
         { name: 'twitter:description', content: 'Innovative solutions for your business problems' },
-        { name: 'twitter:image', content: 'https://puntuale.nl/logo.svg' },
+        { name: 'twitter:image', content: 'https://rps2305.github.io/puntuale-nuxt/logo.svg' },
         { name: 'theme-color', content: '#10b981' },
         ...(process.env.NODE_ENV === 'development' ? [{ name: 'robots', content: 'noindex, nofollow' }] : []),
       ],
@@ -50,7 +51,7 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/png', sizes: '512x512', href: '/icon-512.png' },
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/icon-192.png' },
         { rel: 'mask-icon', href: '/icon-512.svg', color: '#10b981' },
-        { rel: 'canonical', href: 'https://puntuale.nl' },
+        { rel: 'canonical', href: 'https://rps2305.github.io/puntuale-nuxt' },
         { rel: 'manifest', href: '/manifest.json' },
       ],
     },
@@ -59,7 +60,7 @@ export default defineNuxtConfig({
   css: ['~/app.css'],
 
   site: {
-    url: 'https://puntuale.nl',
+    url: 'https://rps2305.github.io/puntuale-nuxt',
     name: 'Puntuale',
     description: 'Problems for your solutions',
   },
@@ -74,13 +75,13 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      siteUrl: 'https://puntuale.nl',
+      siteUrl: 'https://rps2305.github.io/puntuale-nuxt',
       siteName: 'Puntuale',
       siteDescription: 'Problems for your solutions',
       organization: {
         name: 'Puntuale',
-        url: 'https://puntuale.nl',
-        logo: 'https://puntuale.nl/logo.svg',
+        url: 'https://rps2305.github.io/puntuale-nuxt',
+        logo: 'https://rps2305.github.io/puntuale-nuxt/logo.svg',
         address: {
           streetAddress: 'Innovation Street 123',
           addressLocality: 'Amsterdam',

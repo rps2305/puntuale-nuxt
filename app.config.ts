@@ -6,6 +6,6 @@ export default defineAppConfig({
   site: {
     name: 'Puntuale',
     description: 'Problems for your solutions',
-    url: 'https://puntuale.nl',
+    url: 'https://rps2305.github.io/puntuale-nuxt',
   },
 });
