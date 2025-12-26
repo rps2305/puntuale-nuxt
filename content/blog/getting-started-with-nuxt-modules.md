@@ -1,15 +1,16 @@
 ---
 title: Getting Started with Nuxt Modules
-description: Learn how to use Nuxt modules to enhance your application
+description: The toolkit we use to shape time systems for modern teams.
 date: 2025-12-26
 tags:
   - nuxt
   - tutorial
   - modules
-image: /blog-hero.jpg
+image: /images/services.webp
+imageAlt: Planner and notebook on a desk.
 ---
 
-# Getting Started with Nuxt Modules
+## Getting Started with Nuxt Modules
 
 Nuxt modules are the building blocks that extend the core framework functionality. In this article, we'll explore how to use some of the most popular Nuxt modules.
 
@@ -24,31 +25,26 @@ Nuxt modules are JavaScript functions that are called sequentially when booting 
 The `@nuxt/image` module provides optimized images with built-in presets for social media platforms:
 
 ```vue
-<NuxtImg src="/hero.jpg" preset="twitter" />
+<NuxtImg src="/images/hero.webp" preset="twitter" />
 ```
 
 Available presets include Twitter, Facebook, LinkedIn, Instagram (square and portrait), and YouTube.
 
-### @nuxt/ui
+### @nuxt/icon
 
-Beautiful UI components that work out of the box:
+Bring in iconic, semantic cues for timing workflows:
 
 ```vue
-<UButton>Click me</UButton>
-<UInput v-model="text" />
+<Icon name="i-heroicons-clock" />
 ```
 
 ### @nuxt/content
 
 A git-based headless CMS for your Nuxt application. Write your content in Markdown files and query them using a MongoDB-like API.
 
-### @nuxt/icon
+### @nuxt/fonts
 
-Access thousands of icons from all major icon libraries:
-
-```vue
-<Icon name="i-heroicons-star" />
-```
+Lock typography into place so your cadence feels deliberate.
 
 ## Best Practices
 

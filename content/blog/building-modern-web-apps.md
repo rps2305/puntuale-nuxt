@@ -1,16 +1,18 @@
 ---
 title: Building Modern Web Apps with Nuxt
-description: Discover the power of Nuxt 4 for building modern web applications
+description: How we prototype time-aware experiences with Nuxt 4.
 date: 2025-12-20
 tags:
   - nuxt
   - vue
   - web-development
+image: /images/blog.webp
+imageAlt: Strategists walking through a bright studio.
 ---
 
-# Building Modern Web Apps with Nuxt
+## Building Modern Web Apps with Nuxt
 
-Nuxt 4 brings a new level of productivity and performance to Vue.js developers. Let's explore what makes it special.
+Nuxt 4 brings a new level of productivity and performance to Vue.js developers. At Puntuale, we use it to prototype time-aware workflows fast.
 
 ## Why Choose Nuxt?
 

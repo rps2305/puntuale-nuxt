@@ -1,6 +1,26 @@
 # AGENTS.md
 
-This file provides guidelines for agentic coding agents working on this Nuxt 4 project.
+This file provides guidelines for agentic coding agents working on this Nuxt 4 project. It covers project setup, development commands, 
+code style, and best practices to ensure consistency and quality across contributions.
+
+The site is about a imaginary company called Puntuale that offers time management solutions. Slogan is "Problems for all your solutions".
+Add dummy content where needed, add images from pexels.com, convert to webp, and optimize using Nuxt Image module.
+ 
+- Install Nuxt 4 and dependencies
+- Install the next Nuxt modules and add Configurations
+  - @nuxt/content
+  - @nuxt/image
+  - @nuxt/fonts
+  - @nuxt/icon
+  - @nuxt/devtools
+  - @nuxtjs/eslint-module
+  - shadcn-nuxt
+
+
+## Content
+- Use Markdown files in the `content/` directory for all content
+- Add metadata to all pages
+- Add images from pexels.com, convert to webp, and optimize using Nuxt Image module
 
 ## Development Commands
 
@@ -197,6 +217,7 @@ const { data, pending, error } = await useFetch('/api/users', {
 - Use presets for social media images
 - Specify width and height when possible
 - Provide alt text for accessibility
+- output as `webp` format for better performance
 - Use format optimization
 
 ```vue

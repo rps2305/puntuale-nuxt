@@ -1,0 +1,49 @@
+{
+  "brand": "Puntuale",
+  "tagline": "Problems for all your solutions.",
+  "nav": [
+    {
+      "label": "About",
+      "href": "/about"
+    },
+    {
+      "label": "Team",
+      "href": "/team"
+    },
+    {
+      "label": "Insights",
+      "href": "/blog"
+    }
+  ],
+  "cta": {
+    "label": "Book a Sprint",
+    "href": "/contact"
+  },
+  "footer": {
+    "summary": "We choreograph time, attention, and momentum for teams who need their weeks back.",
+    "links": [
+      {
+        "label": "About",
+        "href": "/about"
+      },
+      {
+        "label": "Team",
+        "href": "/team"
+      },
+      {
+        "label": "Insights",
+        "href": "/blog"
+      },
+      {
+        "label": "Contact",
+        "href": "/contact"
+      }
+    ],
+    "contact": [
+      "hello@puntuale.co",
+      "+39 02 9050 114",
+      "Milan · Remote-first"
+    ],
+    "note": "© 2025 Puntuale. Time is our medium."
+  }
+}

@@ -1,81 +1,81 @@
 {
-  "title": "Team Members",
-  "description": "Company team directory",
+  "title": "Timekeepers",
+  "description": "Puntuale team directory",
   "members": [
     {
       "id": "1",
-      "name": "Alice Johnson",
-      "role": "Senior Developer",
-      "department": "Engineering",
-      "email": "alice@example.com",
-      "image": "/images/team/alice.jpg",
+      "name": "Andre Vitale",
+      "role": "Tempo Architect",
+      "department": "Strategy",
+      "email": "andre@puntuale.co",
+      "image": "/images/team/andre.webp",
       "skills": [
-        "JavaScript",
-        "TypeScript",
-        "React",
-        "Node.js"
+        "Tempo Audit",
+        "System Mapping",
+        "Roadmapping",
+        "Facilitation"
       ],
-      "yearsExperience": 5
+      "yearsExperience": 9
     },
     {
       "id": "2",
-      "name": "Bob Smith",
-      "role": "Product Designer",
-      "department": "Design",
-      "email": "bob@example.com",
-      "image": "/images/team/bob.jpg",
+      "name": "Maya Orlandi",
+      "role": "Ritual Designer",
+      "department": "Experience",
+      "email": "maya@puntuale.co",
+      "image": "/images/team/maya.webp",
       "skills": [
-        "Figma",
-        "UI/UX",
-        "Prototyping",
-        "User Research"
-      ],
-      "yearsExperience": 3
-    },
-    {
-      "id": "3",
-      "name": "Carol Williams",
-      "role": "DevOps Engineer",
-      "department": "Engineering",
-      "email": "carol@example.com",
-      "image": "/images/team/carol.jpg",
-      "skills": [
-        "Docker",
-        "Kubernetes",
-        "AWS",
-        "CI/CD"
-      ],
-      "yearsExperience": 4
-    },
-    {
-      "id": "4",
-      "name": "David Brown",
-      "role": "Project Manager",
-      "department": "Management",
-      "email": "david@example.com",
-      "image": "/images/team/david.jpg",
-      "skills": [
-        "Agile",
-        "Scrum",
-        "JIRA",
-        "Communication"
+        "Workshop Design",
+        "Behavior Design",
+        "Narrative",
+        "Prototyping"
       ],
       "yearsExperience": 7
     },
     {
-      "id": "5",
-      "name": "Eva Martinez",
-      "role": "Data Scientist",
-      "department": "Analytics",
-      "email": "eva@example.com",
-      "image": "/images/team/eva.jpg",
+      "id": "3",
+      "name": "Luca Serra",
+      "role": "Momentum Engineer",
+      "department": "Operations",
+      "email": "luca@puntuale.co",
+      "image": "/images/team/luca.webp",
       "skills": [
-        "Python",
-        "Machine Learning",
-        "SQL",
-        "Data Visualization"
+        "Ops Strategy",
+        "Process Design",
+        "Delivery Metrics",
+        "Stakeholder Alignment"
+      ],
+      "yearsExperience": 8
+    },
+    {
+      "id": "4",
+      "name": "Sara Leone",
+      "role": "Signal Curator",
+      "department": "Research",
+      "email": "sara@puntuale.co",
+      "image": "/images/team/sara.webp",
+      "skills": [
+        "Calendar Intelligence",
+        "User Research",
+        "Service Design",
+        "Insight Mining"
       ],
       "yearsExperience": 6
+    },
+    {
+      "id": "5",
+      "name": "Thiago Costa",
+      "role": "Time Systems Analyst",
+      "department": "Analytics",
+      "email": "thiago@puntuale.co",
+      "image": "/images/team/thiago.webp",
+      "skills": [
+        "Forecasting",
+        "Schedule Modeling",
+        "Risk Mapping",
+        "Insight Dashboards"
+      ],
+      "yearsExperience": 10
     }
   ]
 }
