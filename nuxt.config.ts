@@ -98,9 +98,13 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-12-26',
 
   nitro: {
+    preset: 'static',
     prerender: {
+      crawlLinks: true,
       routes: [
         '/',
+        '/sitemap.xml',
+        '/robots.txt',
       ],
     },
   },
