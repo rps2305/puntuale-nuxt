@@ -1,0 +1,166 @@
+{
+  "title": "Team Members",
+  "description": "Company team directory",
+  "members": [
+    {
+      "id": "1",
+      "name": "Alice Johnson",
+      "role": "Senior Developer",
+      "department": "Engineering",
+      "email": "alice@example.com",
+      "image": "/images/team/alice.jpg",
+      "bio": "Alice is a passionate full-stack developer with expertise in building scalable web applications. She specializes in React and Node.js development, creating seamless user experiences that drive business results. Alice is known for her clean code and innovative problem-solving approach.",
+      "skills": [
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Node.js"
+      ],
+      "yearsExperience": 5
+    },
+    {
+      "id": "2",
+      "name": "Bob Smith",
+      "role": "Product Designer",
+      "department": "Design",
+      "email": "bob@example.com",
+      "image": "/images/team/bob.jpg",
+      "bio": "Bob is a creative product designer with a keen eye for detail and user-centric design thinking. He excels at creating intuitive interfaces and conducting user research to inform design decisions. Bob's work balances aesthetics with functionality to deliver exceptional user experiences.",
+      "skills": [
+        "Figma",
+        "UI/UX",
+        "Prototyping",
+        "User Research"
+      ],
+      "yearsExperience": 3
+    },
+    {
+      "id": "3",
+      "name": "Carol Williams",
+      "role": "DevOps Engineer",
+      "department": "Engineering",
+      "email": "carol@example.com",
+      "image": "/images/team/carol.jpg",
+      "bio": "Carol is a skilled DevOps engineer who specializes in building robust CI/CD pipelines and cloud infrastructure. She has extensive experience with Docker and Kubernetes, ensuring smooth deployments and system reliability. Carol's automation skills have reduced deployment times by 60%.",
+      "skills": [
+        "Docker",
+        "Kubernetes",
+        "AWS",
+        "CI/CD"
+      ],
+      "yearsExperience": 4
+    },
+    {
+      "id": "4",
+      "name": "David Brown",
+      "role": "Project Manager",
+      "department": "Management",
+      "email": "david@example.com",
+      "image": "/images/team/david.jpg",
+      "bio": "David is an experienced project manager with a track record of delivering complex projects on time and within budget. He excels at leading cross-functional teams and implementing Agile methodologies. David's strong communication skills ensure all stakeholders stay aligned and informed throughout project lifecycles.",
+      "skills": [
+        "Agile",
+        "Scrum",
+        "JIRA",
+        "Communication"
+      ],
+      "yearsExperience": 7
+    },
+    {
+      "id": "5",
+      "name": "Eva Martinez",
+      "role": "Data Scientist",
+      "department": "Analytics",
+      "email": "eva@example.com",
+      "image": "/images/team/eva.jpg",
+      "bio": "Eva is a talented data scientist who transforms complex datasets into actionable business insights. She specializes in machine learning models and data visualization to help organizations make data-driven decisions. Eva's work has directly contributed to a 25% increase in customer retention for her clients.",
+      "skills": [
+        "Python",
+        "Machine Learning",
+        "SQL",
+        "Data Visualization"
+      ],
+      "yearsExperience": 6
+    },
+    {
+      "id": "6",
+      "name": "Frank Chen",
+      "role": "Security Engineer",
+      "department": "Engineering",
+      "email": "frank@example.com",
+      "image": "/images/team/frank.jpg",
+      "bio": "Frank is a security engineer with extensive experience in cybersecurity and network protection. He specializes in penetration testing and implementing OAuth authentication systems. Frank's proactive approach to security has helped clients prevent potential vulnerabilities and maintain compliance with industry standards.",
+      "skills": [
+        "Cybersecurity",
+        "Penetration Testing",
+        "OAuth",
+        "Network Security"
+      ],
+      "yearsExperience": 8
+    },
+    {
+      "id": "7",
+      "name": "Grace Kim",
+      "role": "UX Researcher",
+      "department": "Design",
+      "email": "grace@example.com",
+      "image": "/images/team/grace.jpg",
+      "bio": "Grace is a dedicated UX researcher who uncovers user insights through comprehensive research methods. She excels at conducting usability tests and user interviews to understand user behavior deeply. Grace's research has led to design improvements that increased user satisfaction scores by 40%.",
+      "skills": [
+        "User Research",
+        "Usability Testing",
+        "Analytics",
+        "Interviews"
+      ],
+      "yearsExperience": 4
+    },
+    {
+      "id": "8",
+      "name": "Henry Davis",
+      "role": "Backend Developer",
+      "department": "Engineering",
+      "email": "henry@example.com",
+      "image": "/images/team/henry.jpg",
+      "bio": "Henry is a skilled backend developer specializing in Java and microservices architecture. He has built scalable systems that handle millions of requests per day. Henry's expertise in Spring Boot and PostgreSQL has been instrumental in improving system performance and reliability for enterprise clients.",
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "Microservices",
+        "PostgreSQL"
+      ],
+      "yearsExperience": 6
+    },
+    {
+      "id": "9",
+      "name": "Iris Lee",
+      "role": "Marketing Manager",
+      "department": "Marketing",
+      "email": "iris@example.com",
+      "image": "/images/team/iris.jpg",
+      "bio": "Iris is a results-driven marketing manager with expertise in digital marketing and brand strategy. She has successfully led campaigns that increased organic traffic by 200% and improved conversion rates significantly. Iris combines data-driven insights with creative storytelling to deliver impactful marketing initiatives.",
+      "skills": [
+        "SEO",
+        "Content Marketing",
+        "Social Media",
+        "Analytics"
+      ],
+      "yearsExperience": 5
+    },
+    {
+      "id": "10",
+      "name": "Jack Wilson",
+      "role": "QA Engineer",
+      "department": "Engineering",
+      "email": "jack@example.com",
+      "image": "/images/team/jack.jpg",
+      "bio": "Jack is a detail-oriented QA engineer who ensures software quality through comprehensive testing strategies. He specializes in automated testing with Selenium and performance optimization. Jack's rigorous testing approach has helped teams reduce bug rates by 75% and improve overall product reliability.",
+      "skills": [
+        "Selenium",
+        "Test Automation",
+        "Performance Testing",
+        "CI/CD"
+      ],
+      "yearsExperience": 4
+    }
+  ]
+}

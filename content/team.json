@@ -1,0 +1,81 @@
+{
+  "title": "Team Members",
+  "description": "Company team directory",
+  "members": [
+    {
+      "id": "1",
+      "name": "Alice Johnson",
+      "role": "Senior Developer",
+      "department": "Engineering",
+      "email": "alice@example.com",
+      "image": "/images/team/alice.jpg",
+      "skills": [
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Node.js"
+      ],
+      "yearsExperience": 5
+    },
+    {
+      "id": "2",
+      "name": "Bob Smith",
+      "role": "Product Designer",
+      "department": "Design",
+      "email": "bob@example.com",
+      "image": "/images/team/bob.jpg",
+      "skills": [
+        "Figma",
+        "UI/UX",
+        "Prototyping",
+        "User Research"
+      ],
+      "yearsExperience": 3
+    },
+    {
+      "id": "3",
+      "name": "Carol Williams",
+      "role": "DevOps Engineer",
+      "department": "Engineering",
+      "email": "carol@example.com",
+      "image": "/images/team/carol.jpg",
+      "skills": [
+        "Docker",
+        "Kubernetes",
+        "AWS",
+        "CI/CD"
+      ],
+      "yearsExperience": 4
+    },
+    {
+      "id": "4",
+      "name": "David Brown",
+      "role": "Project Manager",
+      "department": "Management",
+      "email": "david@example.com",
+      "image": "/images/team/david.jpg",
+      "skills": [
+        "Agile",
+        "Scrum",
+        "JIRA",
+        "Communication"
+      ],
+      "yearsExperience": 7
+    },
+    {
+      "id": "5",
+      "name": "Eva Martinez",
+      "role": "Data Scientist",
+      "department": "Analytics",
+      "email": "eva@example.com",
+      "image": "/images/team/eva.jpg",
+      "skills": [
+        "Python",
+        "Machine Learning",
+        "SQL",
+        "Data Visualization"
+      ],
+      "yearsExperience": 6
+    }
+  ]
+}
