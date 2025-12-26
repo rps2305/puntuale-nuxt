@@ -4,13 +4,13 @@ export default defineNuxtConfig({
     '@nuxt/devtools',
     '@nuxt/image',
     '@nuxt/ui',
-    '@nuxt/icon',
+    // '@nuxt/icon',
     '@nuxt/fonts',
     '@nuxt/content',
-    '@nuxtjs/sitemap',
-    '@nuxtjs/robots',
+    // '@nuxtjs/sitemap',
+    // '@nuxtjs/robots',
     'nuxt-schema-org',
-    '@nuxt/eslint',
+    // '@nuxt/eslint',
     // 'nuxt-security',
     '@vite-pwa/nuxt',
     '@dargmuesli/nuxt-cookie-control',
@@ -93,7 +93,7 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ['~/app.css'],
+  css: ['~/app/app.css'],
 
   site: {
     url: 'https://rps2305.github.io',
