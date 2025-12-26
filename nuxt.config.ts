@@ -132,7 +132,7 @@ export default defineNuxtConfig({
       },
     },
   },
-  compatibilityDate: '2025-12-26',
+  compatibilityDate: '2024-12-01',
 
   nitro: {
     preset: 'static',
@@ -146,8 +146,15 @@ export default defineNuxtConfig({
   },
 
   vite: {
+    optimizeDeps: {
+      include: ['@nuxt/ui'],
+    },
     build: {
       rollupOptions: {
+        onwarn(warning, warn) {
+          if (warning.code === 'MODULE_NOT_FOUND') return;
+          warn(warning);
+        },
         output: {
           manualChunks: {
             '@nuxt/ui': ['@nuxt/ui'],
@@ -155,33 +162,24 @@ export default defineNuxtConfig({
             '@nuxtjs/sitemap': ['@nuxtjs/sitemap'],
           },
         },
-        external: ['@nuxt/kit', '@tailwindcss/oxide'],
       },
       chunkSizeWarningLimit: 1000,
       cssCodeSplit: true,
     },
-    optimizeDeps: {
-      include: ['@nuxt/ui', '@nuxt/image', '@nuxt/icon'],
-      exclude: ['@tailwindcss/oxide'],
-    },
-    resolve: {
-      dedupe: ['@nuxt/ui', '@nuxt/kit'],
-    },
+  },
+
+  experimental: {
+    typedPages: false,
+  },
+
+  features: {
+    inlineStyles: false,
   },
 
   cookieControl: {
     isAcceptNecessaryButtonEnabled: false,
     isControlButtonEnabled: true,
     barPosition: 'bottom-full',
-  },
-
-  eslint: {
-    config: {
-      stylistic: {
-        quotes: 'single',
-        semi: true,
-      },
-    },
   },
 
   image: {
