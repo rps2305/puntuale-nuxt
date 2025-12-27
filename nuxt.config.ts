@@ -49,4 +49,7 @@ export default defineNuxtConfig({
     size: '1.2em',
     class: 'icon',
   },
+  nitro: {
+    preset: 'github-pages',
+  },
 })
