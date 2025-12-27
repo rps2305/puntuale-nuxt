@@ -3,15 +3,15 @@
   "tagline": "Problems for all your solutions.",
   "nav": [
     {
+      "label": "Home",
+      "href": "/"
+    },
+    {
       "label": "About",
       "href": "/about"
     },
     {
-      "label": "Team",
-      "href": "/team"
-    },
-    {
-      "label": "Insights",
+      "label": "Blog",
       "href": "/blog"
     }
   ],
@@ -23,15 +23,15 @@
     "summary": "We choreograph time, attention, and momentum for teams who need their weeks back.",
     "links": [
       {
+        "label": "Home",
+        "href": "/"
+      },
+      {
         "label": "About",
         "href": "/about"
       },
       {
-        "label": "Team",
-        "href": "/team"
-      },
-      {
-        "label": "Insights",
+        "label": "Blog",
         "href": "/blog"
       },
       {
@@ -61,7 +61,7 @@
       "+39 02 9050 114",
       "Milan · Remote-first"
     ],
-    "address": "Via del Tempo 42, 20121 Milan, Italy",
+    "address": "123 Tempo Lane, Suite 4, Milan, Italy",
     "note": "© 2025 Puntuale. Time is our medium."
   }
 }
