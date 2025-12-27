@@ -51,4 +51,7 @@ export default defineNuxtConfig({
       failOnError: false,
     },
   },
+  experimental: {
+    payloadExtraction: false,
+  },
 })
