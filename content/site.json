@@ -39,11 +39,29 @@
         "href": "/contact"
       }
     ],
+    "social": [
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com",
+        "icon": "i-simple-icons-linkedin"
+      },
+      {
+        "label": "X",
+        "href": "https://x.com",
+        "icon": "i-simple-icons-x"
+      },
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com",
+        "icon": "i-simple-icons-instagram"
+      }
+    ],
     "contact": [
       "hello@puntuale.co",
       "+39 02 9050 114",
       "Milan · Remote-first"
     ],
+    "address": "Via del Tempo 42, 20121 Milan, Italy",
     "note": "© 2025 Puntuale. Time is our medium."
   }
 }
