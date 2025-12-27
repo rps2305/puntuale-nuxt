@@ -17,14 +17,20 @@ interface BlogPost {
   imageAlt?: string;
 }
 
-const { data: page } = await useAsyncData('blog-page', () =>
-  queryContent<BlogIndexPage>().where({ path: '/blog' }).findOne(),
+const { data: page } = await useAsyncData<BlogIndexPage | null>('blog-page', () =>
+  (queryCollection('content')
+    .path('/blog')
+    .where('extension', '=', 'md')
+    .first() as Promise<BlogIndexPage | null>),
 );
 
-const { data: posts } = await useAsyncData('blog-posts', async () => {
-  const all = await queryContent<BlogPost>('/blog').sort({ date: -1 }).find();
-  return all.filter((post) => post.path !== '/blog');
-});
+const { data: posts } = await useAsyncData<BlogPost[]>('blog-posts', () =>
+  (queryCollection('content')
+    .where('path', 'LIKE', '/blog/%')
+    .where('extension', '=', 'md')
+    .order('date', 'DESC')
+    .all() as Promise<BlogPost[]>),
+);
 
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Blog page not found' });

@@ -17,8 +17,11 @@ interface AboutPage {
   milestones?: ReadonlyArray<{ title: string; description: string }>;
 }
 
-const { data: page } = await useAsyncData('about', () =>
-  queryContent<AboutPage>().where({ path: '/about' }).findOne(),
+const { data: page } = await useAsyncData<AboutPage | null>('about', () =>
+  (queryCollection('content')
+    .path('/about')
+    .where('extension', '=', 'md')
+    .first() as Promise<AboutPage | null>),
 );
 
 if (!page.value) {

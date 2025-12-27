@@ -9,8 +9,11 @@ interface SiteFooterData {
   };
 }
 
-const { data: site } = await useAsyncData('site-footer', () =>
-  queryContent<SiteFooterData>().where({ path: '/site', extension: 'json' }).findOne(),
+const { data: site } = await useAsyncData<SiteFooterData | null>('site-footer', () =>
+  (queryCollection('content')
+    .path('/site')
+    .where('extension', '=', 'json')
+    .first() as Promise<SiteFooterData | null>),
 );
 </script>
 
