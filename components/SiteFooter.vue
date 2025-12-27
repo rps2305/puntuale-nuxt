@@ -26,13 +26,13 @@ const { data: site } = await useAsyncData<SiteFooterData | null>('site-footer', 
             <Icon name="i-heroicons-clock" />
             {{ site?.brand || 'Puntuale' }}
           </div>
-          <p class="footer-note">{{ site?.footer.summary }}</p>
+          <p class="footer-note">{{ site?.footer?.summary }}</p>
         </div>
         <div>
           <p class="footer-note">Navigate</p>
           <div class="list-grid">
             <NuxtLink
-              v-for="item in site?.footer.links"
+              v-for="item in site?.footer?.links"
               :key="item.href"
               :to="item.href"
             >
@@ -43,11 +43,11 @@ const { data: site } = await useAsyncData<SiteFooterData | null>('site-footer', 
         <div>
           <p class="footer-note">Signals</p>
           <div class="list-grid">
-            <span v-for="item in site?.footer.contact" :key="item">{{ item }}</span>
+            <span v-for="item in site?.footer?.contact" :key="item">{{ item }}</span>
           </div>
         </div>
       </div>
-      <div class="footer-note">{{ site?.footer.note }}</div>
+      <div class="footer-note">{{ site?.footer?.note }}</div>
     </div>
   </footer>
 </template>
