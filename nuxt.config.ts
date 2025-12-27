@@ -51,5 +51,7 @@ export default defineNuxtConfig({
       failOnError: false,
     },
   },
-  ssr: true,
+  experimental: {
+    inlineSSR: false,
+  },
 })
