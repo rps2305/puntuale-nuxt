@@ -12,8 +12,11 @@ interface ContactPage {
   locations?: ReadonlyArray<{ title: string; detail: string }>;
 }
 
-const { data: page } = await useAsyncData('contact', () =>
-  queryContent<ContactPage>().where({ path: '/contact' }).findOne(),
+const { data: page } = await useAsyncData<ContactPage | null>('contact', () =>
+  (queryCollection('content')
+    .path('/contact')
+    .where('extension', '=', 'md')
+    .first() as Promise<ContactPage | null>),
 );
 
 if (!page.value) {

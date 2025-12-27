@@ -5,8 +5,11 @@ interface SiteNav {
   cta: { label: string; href: string };
 }
 
-const { data: site } = await useAsyncData('site-nav', () =>
-  queryContent<SiteNav>().where({ path: '/site', extension: 'json' }).findOne(),
+const { data: site } = await useAsyncData<SiteNav | null>('site-nav', () =>
+  (queryCollection('content')
+    .path('/site')
+    .where('extension', '=', 'json')
+    .first() as Promise<SiteNav | null>),
 );
 </script>
 

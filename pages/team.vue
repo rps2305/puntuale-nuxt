@@ -11,12 +11,18 @@ interface TeamPage {
   cta?: HeroCta;
 }
 
-const { data: page } = await useAsyncData('team-page', () =>
-  queryContent<TeamPage>().where({ path: '/team', extension: 'md' }).findOne(),
+const { data: page } = await useAsyncData<TeamPage | null>('team-page', () =>
+  (queryCollection('content')
+    .path('/team')
+    .where('extension', '=', 'md')
+    .first() as Promise<TeamPage | null>),
 );
 
-const { data: team } = await useAsyncData('team-data', () =>
-  queryContent<TeamData>().where({ path: '/team', extension: 'json' }).findOne(),
+const { data: team } = await useAsyncData<TeamData | null>('team-data', () =>
+  (queryCollection('content')
+    .path('/team')
+    .where('extension', '=', 'json')
+    .first() as Promise<TeamData | null>),
 );
 
 if (!page.value) {

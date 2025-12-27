@@ -27,8 +27,8 @@ interface HomePage {
   };
 }
 
-const { data: page } = await useAsyncData('home', () =>
-  queryContent<HomePage>().where({ path: '/' }).findOne(),
+const { data: page } = await useAsyncData<HomePage | null>('home', () =>
+  (queryCollection('content').path('/').first() as Promise<HomePage | null>),
 );
 
 if (!page.value) {

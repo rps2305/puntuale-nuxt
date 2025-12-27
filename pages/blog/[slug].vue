@@ -11,13 +11,18 @@ interface BlogPostPage {
 const route = useRoute();
 const slug = route.params.slug as string;
 
-const { data: post } = await useAsyncData(`blog-${slug}`, async () => {
-  const direct = await queryContent<BlogPostPage>().where({ path: `/blog/${slug}` }).findOne();
+const { data: post } = await useAsyncData<BlogPostPage | null>(`blog-${slug}`, async () => {
+  const direct = await queryCollection('content')
+    .path(`/blog/${slug}`)
+    .where('extension', '=', 'md')
+    .first();
   if (direct) {
-    return direct;
+    return direct as BlogPostPage;
   }
-  const all = await queryContent<BlogPostPage>('/blog').find();
-  return all.find((entry) => entry.stem === `blog/${slug}`);
+  return (queryCollection('content')
+    .where('stem', '=', `blog/${slug}`)
+    .where('extension', '=', 'md')
+    .first() as Promise<BlogPostPage | null>);
 });
 
 if (!post.value) {
