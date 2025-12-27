@@ -21,6 +21,14 @@
     "vue": "^3.5.26",
     "vue-router": "^4.6.4"
   },
+  "optionalDependencies": {
+    "@oxc-minify/binding-linux-x64-gnu": "^0.105.0",
+    "@oxc-minify/binding-darwin-arm64": "^0.105.0",
+    "@oxc-parser/binding-linux-x64-gnu": "^0.105.0",
+    "@oxc-parser/binding-darwin-arm64": "^0.105.0",
+    "@oxc-transform/binding-linux-x64-gnu": "^0.105.0",
+    "@oxc-transform/binding-darwin-arm64": "^0.105.0"
+  },
   "devDependencies": {
     "@iconify-json/heroicons": "^1.2.3",
     "@nuxt/eslint-config": "^1.12.1",
