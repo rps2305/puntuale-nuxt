@@ -3,6 +3,9 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   appDir: '.',
+  app: {
+    baseURL: process.env.NUXT_APP_BASE_URL ?? '/puntuale-nuxt/',
+  },
   css: ['~/assets/css/main.css'],
   modules: [
     '@nuxt/content',
@@ -11,6 +14,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/devtools',
     '@nuxtjs/eslint-module',
+    '@nuxtjs/tailwindcss',
     'shadcn-nuxt',
   ],
   shadcn: {
