@@ -318,6 +318,12 @@ img {
   gap: 20px;
 }
 
+.site-header-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .site-brand {
   display: flex;
   align-items: center;
@@ -331,6 +337,22 @@ img {
   flex-wrap: wrap;
   gap: 16px;
   font-weight: 500;
+}
+
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(18, 15, 11, 0.12);
+  border-radius: 999px;
+  background: #fff;
+  width: 40px;
+  height: 40px;
+  color: var(--ink-900);
+}
+
+.nav-links-open {
+  display: flex;
 }
 
 .site-footer {
@@ -355,6 +377,41 @@ img {
 .footer-note {
   color: var(--ink-600);
   font-size: 0.9rem;
+}
+
+.footer-address {
+  margin-top: 12px;
+  color: var(--ink-600);
+  font-size: 0.95rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid rgba(18, 15, 11, 0.12);
+  color: var(--ink-900);
+  background: #fff;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 .team-grid {
@@ -459,7 +516,27 @@ img {
 @media (max-width: 720px) {
   .site-header-inner {
     flex-direction: column;
+    align-items: stretch;
+  }
+
+  .site-header-row {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .nav-links {
+    width: 100%;
+    display: none;
+    flex-direction: column;
     align-items: flex-start;
+  }
+
+  .nav-links a {
+    width: 100%;
   }
 
   .hero {

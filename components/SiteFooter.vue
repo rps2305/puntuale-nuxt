@@ -4,7 +4,9 @@ interface SiteFooterData {
   footer: {
     summary: string;
     links: ReadonlyArray<{ label: string; href: string }>;
+    social?: ReadonlyArray<{ label: string; href: string; icon: string }>;
     contact: ReadonlyArray<string>;
+    address?: string;
     note: string;
   };
 }
@@ -44,6 +46,22 @@ const { data: site } = await useAsyncData<SiteFooterData | null>('site-footer', 
           <p class="footer-note">Signals</p>
           <div class="list-grid">
             <span v-for="item in site?.footer?.contact" :key="item">{{ item }}</span>
+          </div>
+          <p v-if="site?.footer?.address" class="footer-address">
+            {{ site.footer.address }}
+          </p>
+          <div v-if="site?.footer?.social?.length" class="footer-social">
+            <a
+              v-for="item in site.footer.social"
+              :key="item.href"
+              :href="item.href"
+              target="_blank"
+              rel="noreferrer"
+              :aria-label="item.label"
+              class="footer-social-link"
+            >
+              <Icon :name="item.icon" />
+            </a>
           </div>
         </div>
       </div>
