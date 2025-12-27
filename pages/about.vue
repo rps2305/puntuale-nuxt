@@ -1,29 +1,20 @@
 <script setup lang="ts">
-import type { FeatureItem, HeroCta, StatItem } from '~/types/content';
-
-interface AboutPage {
-  title: string;
-  description?: string;
-  tagline?: string;
-  image?: string;
-  imageAlt?: string;
-  cta?: HeroCta;
-  stats?: ReadonlyArray<StatItem>;
-  values?: {
-    title?: string;
-    subtitle?: string;
-    items: ReadonlyArray<FeatureItem>;
-  };
-  milestones?: ReadonlyArray<{ title: string; description: string }>;
-}
-
 const { data: page } = await useAsyncData('about', () =>
-  queryContent<AboutPage>().where({ path: '/about' }).findOne(),
+  queryCollection('content').path('/about').first(),
 );
 
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'About page not found' });
 }
+
+const stats = computed(() => page.value?.meta?.stats || []);
+const values = computed(() => page.value?.meta?.values || { items: [] });
+const milestones = computed(() => page.value?.meta?.milestones || []);
+const cta = computed(() => page.value?.meta?.cta);
+const image = computed(() => page.value?.meta?.image);
+const imageAlt = computed(() => page.value?.meta?.imageAlt);
+const tagline = computed(() => page.value?.meta?.tagline);
+
 
 useHead({
   title: `${page.value.title} | Puntuale`,
@@ -40,24 +31,24 @@ useHead({
     <ContentHero
       :title="page.title"
       :description="page.description"
-      :tagline="page.tagline"
-      :image="page.image"
-      :image-alt="page.imageAlt"
-      :cta="page.cta"
+      :tagline="tagline"
+      :image="image"
+      :image-alt="imageAlt"
+      :cta="cta"
     />
-    <StatsStrip v-if="page.stats?.length" :stats="page.stats" />
+    <StatsStrip v-if="stats.length" :stats="stats" />
     <FeatureGrid
-      v-if="page.values"
-      :title="page.values.title"
-      :subtitle="page.values.subtitle"
-      :items="page.values.items"
+      v-if="values"
+      :title="values.title"
+      :subtitle="values.subtitle"
+      :items="values.items"
     />
     <section class="section">
       <div class="shell">
         <ContentRenderer :value="page" class="content-prose" />
       </div>
     </section>
-    <section v-if="page.milestones?.length" class="section">
+    <section v-if="milestones.length" class="section">
       <div class="shell">
         <div class="section-tight">
           <span class="pill">
@@ -67,7 +58,7 @@ useHead({
           <h2 class="hero-title">Moments when we caught time behaving</h2>
         </div>
         <div class="card-grid">
-          <article v-for="item in page.milestones" :key="item.title" class="card">
+          <article v-for="item in milestones" :key="item.title" class="card">
             <h3>{{ item.title }}</h3>
             <p>{{ item.description }}</p>
           </article>

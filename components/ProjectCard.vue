@@ -1,0 +1,35 @@
+<script setup lang="ts">
+defineProps<{
+  title: string;
+  client: string;
+  duration: string;
+  description: string;
+  href: string;
+  image?: string;
+  imageAlt?: string;
+  tags?: ReadonlyArray<string>;
+}>();
+</script>
+
+<template>
+  <NuxtLink :to="href" class="project-card">
+    <NuxtImg
+      v-if="image"
+      :src="image"
+      preset="card"
+      :alt="imageAlt || title"
+      loading="lazy"
+    />
+    <div class="list-grid">
+      <div class="project-meta">
+        <span class="client">{{ client }}</span>
+        <span class="duration">{{ duration }}</span>
+      </div>
+      <h3>{{ title }}</h3>
+      <p>{{ description }}</p>
+      <div v-if="tags?.length" class="tag-row">
+        <span v-for="tag in tags" :key="tag" class="tag">{{ tag }}</span>
+      </div>
+    </div>
+  </NuxtLink>
+</template>

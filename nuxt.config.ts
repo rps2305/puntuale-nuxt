@@ -9,18 +9,14 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/fonts',
     '@nuxt/icon',
-    '@nuxt/devtools',
-    '@nuxtjs/eslint-module',
+    // '@nuxt/devtools',
+    // '@nuxtjs/eslint-module',
     'shadcn-nuxt',
   ],
   shadcn: {
     componentDir: [],
   },
-  content: {
-    highlight: {
-      theme: 'github-dark',
-    },
-  },
+  content: {},
   image: {
     format: ['webp'],
     quality: 80,

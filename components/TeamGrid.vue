@@ -10,7 +10,12 @@ defineProps<{
   <section class="section">
     <div class="shell">
       <div class="team-grid">
-        <article v-for="member in members" :key="member.id" class="team-card">
+        <NuxtLink
+          v-for="member in members"
+          :key="member.id"
+          :to="`/team/${member.id}`"
+          class="team-card"
+        >
           <NuxtImg :src="member.image" preset="portrait" :alt="member.name" loading="lazy" />
           <h3>{{ member.name }}</h3>
           <p>{{ member.role }}</p>
@@ -18,7 +23,7 @@ defineProps<{
           <div class="tag-row">
             <span v-for="skill in member.skills" :key="skill" class="tag">{{ skill }}</span>
           </div>
-        </article>
+        </NuxtLink>
       </div>
     </div>
   </section>

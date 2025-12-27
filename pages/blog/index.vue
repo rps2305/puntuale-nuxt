@@ -1,34 +1,21 @@
 <script setup lang="ts">
-interface BlogIndexPage {
-  title: string;
-  description?: string;
-  tagline?: string;
-  image?: string;
-  imageAlt?: string;
-}
-
-interface BlogPost {
-  path?: string;
-  title: string;
-  description: string;
-  date?: string;
-  tags?: ReadonlyArray<string>;
-  image?: string;
-  imageAlt?: string;
-}
-
 const { data: page } = await useAsyncData('blog-page', () =>
-  queryContent<BlogIndexPage>().where({ path: '/blog' }).findOne(),
+  queryCollection('content').path('/blog').first(),
 );
 
 const { data: posts } = await useAsyncData('blog-posts', async () => {
-  const all = await queryContent<BlogPost>('/blog').sort({ date: -1 }).find();
-  return all.filter((post) => post.path !== '/blog');
+  const all = await queryCollection('content').where({ path: { $startsWith: '/blog' } }).all();
+  return all.filter((post) => post._path !== '/blog');
 });
 
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Blog page not found' });
 }
+
+const image = computed(() => page.value?.meta?.image);
+const imageAlt = computed(() => page.value?.meta?.imageAlt);
+const tagline = computed(() => page.value?.meta?.tagline);
+
 
 useHead({
   title: `${page.value.title} | Puntuale`,
@@ -45,9 +32,9 @@ useHead({
     <ContentHero
       :title="page.title"
       :description="page.description"
-      :tagline="page.tagline"
-      :image="page.image"
-      :image-alt="page.imageAlt"
+      :tagline="tagline"
+      :image="image"
+      :image-alt="imageAlt"
     />
     <section class="section">
       <div class="shell">
@@ -59,14 +46,14 @@ useHead({
         <div class="blog-grid">
           <BlogCard
             v-for="post in posts || []"
-            :key="post.path || post.title"
+            :key="post._path || post.title"
             :title="post.title"
-            :description="post.description"
-            :href="post.path || '/blog'"
-            :image="post.image"
-            :image-alt="post.imageAlt"
-            :date="post.date"
-            :tags="post.tags"
+            :description="post.meta?.description"
+            :href="post._path || '/blog'"
+            :image="post.meta?.image"
+            :image-alt="post.meta?.imageAlt"
+            :date="post.meta?.date"
+            :tags="post.meta?.tags"
           />
         </div>
       </div>

@@ -1,0 +1,109 @@
+{
+  "title": "Our Work",
+  "description": "Case studies in time, focus, and operational cadence.",
+  "tagline": "Turning chaos into clockwork",
+  "image": "/images/projects/projects.webp",
+  "imageAlt": "Abstract clock hands moving in harmony, representing synchronized workflows. Photo by Scott Webb on Unsplash.",
+  "cta": {
+    "primary": {
+      "label": "Start your project",
+      "href": "/contact"
+    },
+    "secondary": {
+      "label": "Meet the team",
+      "href": "/team"
+    }
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "TimeSync Platform",
+      "client": "FinTech Startup",
+      "duration": "3 months",
+      "description": "Built a real-time scheduling platform that coordinates distributed teams across 12 time zones with intelligent conflict detection and automated rescheduling.",
+      "tags": ["SaaS", "Real-time", "Time Management"],
+      "image": "/images/projects/timesync.webp",
+      "imageAlt": "Digital clock interface showing multiple time zones. Photo by Lukas from Pexels.",
+      "stats": {
+        "users": "2,500+",
+        "meetingsSaved": "40%",
+        "efficiency": "+60%"
+      }
+    },
+    {
+      "id": 2,
+      "title": "FocusFlow Workflow",
+      "client": "Creative Agency",
+      "duration": "2 months",
+      "description": "Designed and implemented a deep work workflow system that blocks distraction periods, tracks focus metrics, and generates productivity insights for creative professionals.",
+      "tags": ["Productivity", "Workflow", "Analytics"],
+      "image": "/images/projects/focusflow.webp",
+      "imageAlt": "Person working focused on laptop in minimal workspace. Photo by Andrea Piacquadio from Pexels.",
+      "stats": {
+        "focusTime": "+4h/day",
+        "projects": "50+",
+        "satisfaction": "95%"
+      }
+    },
+    {
+      "id": 3,
+      "title": "CalendarOps Dashboard",
+      "client": "Enterprise Client",
+      "duration": "4 months",
+      "description": "Developed an enterprise calendar operations platform that manages executive schedules, resource allocation, and meeting analytics with automated reporting and forecasting.",
+      "tags": ["Enterprise", "Dashboard", "Analytics"],
+      "image": "/images/projects/calendarops.webp",
+      "imageAlt": "Business professionals reviewing calendar and data on tablets. Photo by Christina Morillo from Unsplash.",
+      "stats": {
+        "executives": "45",
+        "meetings": "5,000+/mo",
+        "accuracy": "99.5%"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Pulse Notification System",
+      "client": "Healthcare Provider",
+      "duration": "3 months",
+      "description": "Created an intelligent notification system that delivers time-sensitive alerts to medical staff while respecting shift patterns, break times, and patient priority levels.",
+      "tags": ["Healthcare", "Notifications", "Scheduling"],
+      "image": "/images/projects/pulsenotify.webp",
+      "imageAlt": "Medical professionals using tablets in modern hospital setting. Photo by Hush Naidoo Jade Photography from Unsplash.",
+      "stats": {
+        "alerts": "10,000+/day",
+        "responseTime": "<2min",
+        "coverage": "24/7"
+      }
+    },
+    {
+      "id": 5,
+      "title": "RetailRhythm Scheduler",
+      "client": "Retail Chain",
+      "duration": "2 months",
+      "description": "Built an AI-powered staff scheduling system that predicts peak hours, optimizes shift assignments, and reduces labor costs while maintaining customer service standards.",
+      "tags": ["Retail", "AI", "Optimization"],
+      "image": "/images/projects/retailrhythm.webp",
+      "imageAlt": "Retail store employees organized and working efficiently. Photo by Karolina Grabowska from Pexels.",
+      "stats": {
+        "stores": "120",
+        "staff": "3,000+",
+        "savings": "15%"
+      }
+    },
+    {
+      "id": 6,
+      "title": "MeetingMinder Assistant",
+      "client": "Tech Company",
+      "duration": "1 month",
+      "description": "Developed a meeting management tool that automatically captures action items, tracks follow-ups, and integrates with project management tools to ensure nothing falls through the cracks.",
+      "tags": ["Productivity", "Automation", "Integration"],
+      "image": "/images/projects/meetingminder.webp",
+      "imageAlt": "Team having productive meeting with notes and action items. Photo by Christina Morillo from Pexels.",
+      "stats": {
+        "meetings": "500+/week",
+        "actionItems": "2,500+/mo",
+        "completion": "85%"
+      }
+    }
+  ]
+}

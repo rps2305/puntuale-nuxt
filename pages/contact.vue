@@ -1,24 +1,19 @@
 <script setup lang="ts">
-import type { ContactForm, HeroCta } from '~/types/content';
-
-interface ContactPage {
-  title: string;
-  description?: string;
-  tagline?: string;
-  image?: string;
-  imageAlt?: string;
-  cta?: HeroCta;
-  form: ContactForm;
-  locations?: ReadonlyArray<{ title: string; detail: string }>;
-}
-
 const { data: page } = await useAsyncData('contact', () =>
-  queryContent<ContactPage>().where({ path: '/contact' }).findOne(),
+  queryCollection('content').path('/contact').first(),
 );
 
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Contact page not found' });
 }
+
+const form = computed(() => page.value?.meta?.form);
+const locations = computed(() => page.value?.meta?.locations || []);
+const cta = computed(() => page.value?.meta?.cta);
+const image = computed(() => page.value?.meta?.image);
+const imageAlt = computed(() => page.value?.meta?.imageAlt);
+const tagline = computed(() => page.value?.meta?.tagline);
+
 
 useHead({
   title: `${page.value.title} | Puntuale`,
@@ -35,18 +30,18 @@ useHead({
     <ContentHero
       :title="page.title"
       :description="page.description"
-      :tagline="page.tagline"
-      :image="page.image"
-      :image-alt="page.imageAlt"
-      :cta="page.cta"
+      :tagline="tagline"
+      :image="image"
+      :image-alt="imageAlt"
+      :cta="cta"
     />
     <section class="section">
       <div class="shell">
         <ContentRenderer :value="page" class="content-prose" />
       </div>
     </section>
-    <ContactPanel :form="page.form" />
-    <section v-if="page.locations?.length" class="section">
+    <ContactPanel v-if="form" :form="form" />
+    <section v-if="locations.length" class="section">
       <div class="shell">
         <div class="section-tight">
           <span class="pill">
@@ -56,7 +51,7 @@ useHead({
           <h2 class="hero-title">Where we keep the clocks running</h2>
         </div>
         <div class="card-grid">
-          <article v-for="item in page.locations" :key="item.title" class="card">
+          <article v-for="item in locations" :key="item.title" class="card">
             <h3>{{ item.title }}</h3>
             <p>{{ item.detail }}</p>
           </article>

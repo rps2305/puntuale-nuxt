@@ -3,24 +3,20 @@
 This file provides guidelines for agentic coding agents working on this Nuxt 4 project. It covers project setup, development commands, 
 code style, and best practices to ensure consistency and quality across contributions.
 
-The site is about a imaginary company called Puntuale that offers time management solutions. Slogan is "Problems for all your solutions".
+The site is about an imaginary company called Puntuale that offers time management solutions. Slogan is "Problems for all your solutions".
 Add dummy content where needed, add images from pexels.com, convert to webp, and optimize using Nuxt Image module.
- 
-- Install Nuxt 4 and dependencies
-- Install the next Nuxt modules and add Configurations
-  - @nuxt/content
-  - @nuxt/image
-  - @nuxt/fonts
-  - @nuxt/icon
-  - @nuxt/devtools
-  - @nuxtjs/eslint-module
-  - shadcn-nuxt
 
+## Project Setup
 
-## Content
-- Use Markdown files in the `content/` directory for all content
-- Add metadata to all pages
-- Add images from pexels.com, convert to webp, and optimize using Nuxt Image module
+- Install Nuxt 4 and dependencies with `npm install`
+- The project uses the following Nuxt modules:
+  - @nuxt/content - For Markdown-based content management
+  - @nuxt/image - For image optimization
+  - @nuxt/fonts - For font management
+  - @nuxt/icon - For icon management
+  - @nuxt/devtools - For development tools
+  - @nuxtjs/eslint-module - For ESLint integration
+  - shadcn-nuxt - For UI components
 
 ## Development Commands
 
@@ -43,6 +39,14 @@ Add dummy content where needed, add images from pexels.com, convert to webp, and
 ### Testing
 
 No test framework is currently configured. To run tests, first set up Vitest or similar.
+To add testing capabilities:
+1. Install Vitest: `npm install -D vitest`
+2. Install Vue Test Utils: `npm install -D @vue/test-utils`
+3. Add test scripts to package.json:
+   - `npm run test` - Run all tests
+   - `npm run test:watch` - Run tests in watch mode
+   - `npm run test:ui` - Run tests with UI
+   - `npm run test:run` - Run tests once
 
 ## Code Style Guidelines
 
@@ -217,7 +221,7 @@ const { data, pending, error } = await useFetch('/api/users', {
 - Use presets for social media images
 - Specify width and height when possible
 - Provide alt text for accessibility
-- output as `webp` format for better performance
+- Output as `webp` format for better performance
 - Use format optimization
 
 ```vue
@@ -282,7 +286,7 @@ const { data, pending, error } = await useFetch('/api/users', {
 - Implement caching strategies where appropriate
 - Minimize bundle size by tree-shaking
 
-## Testing
+## Testing Guidelines
 
 When adding tests:
 - Use Vitest for unit tests
@@ -290,3 +294,4 @@ When adding tests:
 - Test composables independently
 - Mock external dependencies
 - Test for happy paths and error cases
+- Run a single test with: `npm run test:run -- testName`

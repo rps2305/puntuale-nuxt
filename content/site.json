@@ -3,12 +3,20 @@
   "tagline": "Problems for all your solutions.",
   "nav": [
     {
+      "label": "Home",
+      "href": "/"
+    },
+    {
       "label": "About",
       "href": "/about"
     },
     {
       "label": "Team",
       "href": "/team"
+    },
+    {
+      "label": "Work",
+      "href": "/projects"
     },
     {
       "label": "Insights",
@@ -31,6 +39,10 @@
         "href": "/team"
       },
       {
+        "label": "Work",
+        "href": "/projects"
+      },
+      {
         "label": "Insights",
         "href": "/blog"
       },
@@ -41,8 +53,22 @@
     ],
     "contact": [
       "hello@puntuale.co",
-      "+39 02 9050 114",
-      "Milan · Remote-first"
+      "+39 02 9050 114"
+    ],
+    "address": "Via Torino 123, 20124 Milan, Italy",
+    "legal": [
+      {
+        "label": "Disclaimer",
+        "href": "/disclaimer"
+      },
+      {
+        "label": "Privacy Policy",
+        "href": "/privacy"
+      },
+      {
+        "label": "Cookie Policy",
+        "href": "/cookies"
+      }
     ],
     "note": "© 2025 Puntuale. Time is our medium."
   }
