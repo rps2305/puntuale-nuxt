@@ -28,8 +28,15 @@ const { data: posts } = await useAsyncData<BlogPost[]>('blog-posts', () =>
   (queryCollection('content')
     .where('path', 'LIKE', '/blog/%')
     .where('extension', '=', 'md')
-    .order('date', 'DESC')
     .all() as Promise<BlogPost[]>),
+);
+
+const sortedPosts = computed(() =>
+  (posts.value || []).slice().sort((a, b) => {
+    const aTime = a.date ? Date.parse(a.date) : 0;
+    const bTime = b.date ? Date.parse(b.date) : 0;
+    return bTime - aTime;
+  }),
 );
 
 if (!page.value) {
@@ -64,7 +71,7 @@ useHead({
       <div class="shell">
         <div class="blog-grid">
           <BlogCard
-            v-for="post in posts || []"
+            v-for="post in sortedPosts"
             :key="post.path || post.title"
             :title="post.title"
             :description="post.description"

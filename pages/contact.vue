@@ -8,7 +8,7 @@ interface ContactPage {
   image?: string;
   imageAlt?: string;
   cta?: HeroCta;
-  form: ContactForm;
+  form?: ContactForm;
   locations?: ReadonlyArray<{ title: string; detail: string }>;
 }
 
@@ -48,7 +48,7 @@ useHead({
         <ContentRenderer :value="page" class="content-prose" />
       </div>
     </section>
-    <ContactPanel :form="page.form" />
+    <ContactPanel v-if="page.form" :form="page.form" />
     <section v-if="page.locations?.length" class="section">
       <div class="shell">
         <div class="section-tight">
