@@ -45,4 +45,10 @@ export default defineNuxtConfig({
     size: '1.2em',
     class: 'icon',
   },
+  nitro: {
+    prerender: {
+      ignore: ['/_ipx'],
+      failOnError: false,
+    },
+  },
 })
