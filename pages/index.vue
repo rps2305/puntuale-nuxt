@@ -1,4 +1,10 @@
 <script setup lang="ts">
+const page = queryContent('/index');
+
+if (!page) {
+  throw createError({ statusCode: 404, statusMessage: 'Home page not found' });
+}
+
 const stats = [
   {
     value: '11.2h',
@@ -46,7 +52,7 @@ const features = {
 
 const services = {
   title: 'Timeware',
-  subtitle: 'We design systems that hold your pace even when schedule does not.',
+  subtitle: 'We design systems that hold your pace even when the schedule does not.',
   items: [
     {
       title: 'Calendar Intelligence',
@@ -121,28 +127,7 @@ const ctaPanel = {
     />
     <section class="section">
       <div class="shell">
-        <ContentRenderer :value="`# Welcome to Puntuale
-
-We run on a simple rule: if time is your scarcest resource, it deserves better design.
-
-## Our Mission
-
-Puntuale is an imaginary studio focused on time management systems. We choreograph how teams plan, decide, and deliver so they can ship with clarity instead of chaos.
-
-## Why Choose Puntuale?
-
-- **Human tempo**: We design with energy in mind, not just efficiency.
-- **Measured momentum**: We model the week, not just the sprint.
-- **Elegant rigor**: Every ritual is built to protect deep work.
-
-## Get Started
-
-Ready to solve your problems with Puntuale?
-
-- [Learn more about us](/about)
-- [Contact us today](/contact)
-- [Read our field notes](/blog)
-`" class="content-prose" />
+        <ContentRenderer :value="page" class="content-prose" />
       </div>
     </section>
     <section class="section">
