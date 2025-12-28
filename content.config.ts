@@ -4,9 +4,5 @@ export default {
       type: 'page',
       source: '**/*.md',
     },
-    data: {
-      type: 'data',
-      source: '**/*.json',
-    },
   },
 }

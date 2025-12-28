@@ -1,20 +1,18 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData('home', () =>
-  queryCollection('content').path('/').first(),
-);
+const page = queryContent('path', '/index');
 
-if (!page.value) {
+if (!page) {
   throw createError({ statusCode: 404, statusMessage: 'Home page not found' });
 }
 
-const stats = computed(() => page.value?.meta?.stats || []);
-const features = computed(() => page.value?.meta?.features || { items: [] });
-const services = computed(() => page.value?.meta?.services || { items: [] });
-const ctaPanel = computed(() => page.value?.meta?.ctaPanel);
-const cta = computed(() => page.value?.meta?.cta);
-const image = computed(() => page.value?.meta?.image);
-const imageAlt = computed(() => page.value?.meta?.imageAlt);
-const tagline = computed(() => page.value?.meta?.tagline);
+const stats = computed(() => page?.meta?.stats || []);
+const features = computed(() => page?.meta?.features || { items: [] });
+const services = computed(() => page?.meta?.services || { items: [] });
+const ctaPanel = computed(() => page?.meta?.ctaPanel);
+const cta = computed(() => page?.meta?.cta);
+const image = computed(() => page?.meta?.image);
+const imageAlt = computed(() => page?.meta?.imageAlt);
+const tagline = computed(() => page?.meta?.tagline);
 
 
 useHead({
