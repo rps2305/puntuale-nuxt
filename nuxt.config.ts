@@ -2,10 +2,23 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   appDir: '.',
+  app: {
+    baseURL: '/puntuale-nuxt/',
+    head: {
+      htmlAttrs: {
+        lang: 'en',
+      },
+      meta: [
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/puntuale-nuxt/favicon.ico' },
+      ],
+    },
+  },
   css: ['~/assets/css/main.css'],
   modules: [
     '@nuxt/content',
-    // '@nuxt/image',
     '@nuxt/fonts',
     '@nuxt/icon',
     'shadcn-nuxt',
@@ -16,7 +29,7 @@ export default defineNuxtConfig({
   content: {},
   image: {
     quality: 80,
-  presets: {
+    presets: {
       hero: {
         modifiers: { format: 'webp', width: 1400, height: 900, fit: 'cover' },
       },
@@ -45,19 +58,6 @@ export default defineNuxtConfig({
     prerender: {
       ignore: ['/_ipx'],
       failOnError: false,
-    },
-  },
-  app: {
-    head: {
-      htmlAttrs: {
-        lang: 'en',
-      },
-      meta: [
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      ],
-      link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      ],
     },
   },
 })
