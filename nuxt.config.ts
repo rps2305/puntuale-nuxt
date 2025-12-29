@@ -19,6 +19,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   modules: [
     '@nuxt/content',
+    '@nuxthq/studio',
     '@nuxt/image',
     '@nuxt/fonts',
     '@nuxt/icon',
@@ -28,6 +29,7 @@ export default defineNuxtConfig({
     componentDir: [],
   },
   content: {},
+  studio: {},
   image: {
     quality: 80,
     presets: {

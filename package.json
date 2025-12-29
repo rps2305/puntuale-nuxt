@@ -17,6 +17,7 @@
     "@nuxt/fonts": "^0.12.1",
     "@nuxt/icon": "^2.1.1",
     "@nuxt/image": "^2.0.0",
+    "@nuxthq/studio": "^2.2.1",
     "@nuxtjs/eslint-module": "^4.1.0",
     "better-sqlite3": "^12.5.0",
     "lightningcss": "^1.30.2",
@@ -26,16 +27,16 @@
     "vue-router": "^4.6.4"
   },
   "optionalDependencies": {
-    "@oxc-minify/binding-linux-x64-gnu": "*",
     "@oxc-minify/binding-darwin-arm64": "*",
-    "@oxc-parser/binding-linux-x64-gnu": "*",
+    "@oxc-minify/binding-linux-x64-gnu": "*",
     "@oxc-parser/binding-darwin-arm64": "*",
-    "@oxc-transform/binding-linux-x64-gnu": "*",
+    "@oxc-parser/binding-linux-x64-gnu": "*",
     "@oxc-transform/binding-darwin-arm64": "*",
-    "@rollup/rollup-linux-x64-gnu": "*",
+    "@oxc-transform/binding-linux-x64-gnu": "*",
     "@rollup/rollup-darwin-arm64": "*",
-    "lightningcss-linux-x64-gnu": "*",
-    "lightningcss-darwin-arm64": "*"
+    "@rollup/rollup-linux-x64-gnu": "*",
+    "lightningcss-darwin-arm64": "*",
+    "lightningcss-linux-x64-gnu": "*"
   },
   "devDependencies": {
     "@iconify-json/heroicons": "^1.2.3",
