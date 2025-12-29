@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   appDir: '.',
   app: {
-    baseURL: '/puntuale-nuxt/',
+    baseURL: process.env.NODE_ENV === 'production' ? '/puntuale-nuxt/' : '',
     head: {
       htmlAttrs: {
         lang: 'en',
@@ -12,7 +12,7 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/puntuale-nuxt/favicon.ico' },
+        { rel: 'icon', type: 'image/x-icon', href: process.env.NODE_ENV === 'production' ? '/puntuale-nuxt/favicon.ico' : '/favicon.ico' },
       ],
     },
   },
