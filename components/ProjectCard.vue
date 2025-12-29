@@ -13,14 +13,15 @@ defineProps<{
 
 <template>
   <NuxtLink :to="href" class="project-card">
-     <img
-       v-if="image"
-       :src="image"
-       :alt="imageAlt || title"
-       loading="lazy"
-       width="700"
-       height="480"
-     >
+      <NuxtImg
+        v-if="image"
+        :src="image"
+        :alt="imageAlt || title"
+        loading="lazy"
+        width="700"
+        height="480"
+        format="webp"
+      />
     <div class="list-grid">
       <div class="project-meta">
         <span class="client">{{ client }}</span>
