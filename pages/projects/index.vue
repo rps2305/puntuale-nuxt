@@ -1,11 +1,16 @@
 <script setup lang="ts">
 const { data: projects } = await useAsyncData('projects-data', async () => {
-  const all = await queryContent().find();
-  return all.find((item) => item.stem === 'projects' && item.extension === 'json');
+  try {
+    return await queryContent('/projects').findOne();
+  } catch (error) {
+    console.warn('Projects data not found:', error);
+    return null;
+  }
 });
 
-if (!projects.value) {
-  throw createError({ statusCode: 404, statusMessage: 'Projects page not found' });
+// Handle missing content gracefully during prerendering
+if (!projects.value && process.server) {
+  console.warn('Projects data not found during prerendering');
 }
 
 const cta = computed(() => projects.value?.cta);
@@ -27,8 +32,8 @@ useHead({
 <template>
   <div v-if="projects">
     <ContentHero
-      :title="projects.meta?.title"
-      :description="projects.meta?.description"
+      :title="projects.title"
+      :description="projects.description"
       :tagline="tagline"
       :image="image"
       :image-alt="imageAlt"

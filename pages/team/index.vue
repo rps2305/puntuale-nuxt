@@ -1,16 +1,26 @@
 <script setup lang="ts">
 const { data: page } = await useAsyncData('team-page', async () => {
-  const all = await queryContent().find();
-  return all.find((item) => item.stem === 'team' && item.extension === 'md');
+  try {
+    return await queryContent('/team').findOne();
+  } catch (error) {
+    console.warn('Team page not found:', error);
+    return null;
+  }
 });
 
 const { data: team } = await useAsyncData('team-data', async () => {
-  const all = await queryContent().find();
-  return all.find((item) => item.stem === 'team' && item.extension === 'json');
+  try {
+    const all = await queryContent().find();
+    return all.find((item) => item.stem === 'team' && item.extension === 'json');
+  } catch (error) {
+    console.warn('Team data not found:', error);
+    return null;
+  }
 });
 
-if (!page.value) {
-  throw createError({ statusCode: 404, statusMessage: 'Team page not found' });
+// Handle missing content gracefully during prerendering
+if (!page.value && process.server) {
+  console.warn('Team page data not found during prerendering');
 }
 
 const cta = computed(() => page.value?.cta);
