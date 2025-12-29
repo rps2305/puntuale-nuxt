@@ -77,3 +77,7 @@ The workflow file is located at `.github/workflows/deploy.yml`.
 
 - Nuxt 4 requires Node `>=20.19.0` (or `>=22.12.0`). If you see engine warnings,
   upgrade Node to avoid potential build/runtime issues.
+
+## Deployment Status
+
+✅ **Latest deployment**: $(date) - All assets working correctly
