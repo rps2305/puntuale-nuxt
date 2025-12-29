@@ -9,7 +9,7 @@ const { data: projects } = await useAsyncData('projects-data', async () => {
 });
 
 // Handle missing content gracefully during prerendering
-if (!projects.value && process.server) {
+if (!projects.value && import.meta.server) {
   console.warn('Projects data not found during prerendering');
 }
 

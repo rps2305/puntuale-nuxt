@@ -19,7 +19,7 @@ const { data: team } = await useAsyncData('team-data', async () => {
 });
 
 // Handle missing content gracefully during prerendering
-if (!page.value && process.server) {
+if (!page.value && import.meta.server) {
   console.warn('Team page data not found during prerendering');
 }
 
