@@ -51,7 +51,16 @@ useHead({
     />
     <section class="section">
       <div class="shell">
-        <ContentRenderer :value="page" class="content-prose" />
+        <div class="content-prose">
+          <h2>Meet the timekeepers</h2>
+          <p>We are strategists, facilitators, and designers who treat time as a shared artifact. We bring calm to the schedule so teams can build what matters.</p>
+          <h2>How we work together</h2>
+          <ul>
+            <li>We run remote-first with focused in-person sprints.</li>
+            <li>We protect 50% of the week for deep work.</li>
+            <li>We document every decision in a living timeline.</li>
+          </ul>
+        </div>
       </div>
     </section>
     <TeamGrid v-if="teamMembers.length" :members="teamMembers" />

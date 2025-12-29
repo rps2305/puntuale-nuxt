@@ -8,7 +8,7 @@
       "role": "Tempo Architect",
       "department": "Strategy",
       "email": "andre@puntuale.co",
-      "image": "/images/team/andre.webp",
+      "image": "/puntuale-nuxt/images/team/andre.webp",
       "skills": [
         "Tempo Audit",
         "System Mapping",
@@ -23,7 +23,7 @@
       "role": "Ritual Designer",
       "department": "Experience",
       "email": "maya@puntuale.co",
-      "image": "/images/team/maya.webp",
+      "image": "/puntuale-nuxt/images/team/maya.webp",
       "skills": [
         "Workshop Design",
         "Behavior Design",
@@ -38,7 +38,7 @@
       "role": "Momentum Engineer",
       "department": "Operations",
       "email": "luca@puntuale.co",
-      "image": "/images/team/luca.webp",
+      "image": "/puntuale-nuxt/images/team/luca.webp",
       "skills": [
         "Ops Strategy",
         "Process Design",
@@ -53,7 +53,7 @@
       "role": "Signal Curator",
       "department": "Research",
       "email": "sara@puntuale.co",
-      "image": "/images/team/sara.webp",
+      "image": "/puntuale-nuxt/images/team/sara.webp",
       "skills": [
         "Calendar Intelligence",
         "User Research",
@@ -68,7 +68,7 @@
       "role": "Time Systems Analyst",
       "department": "Analytics",
       "email": "thiago@puntuale.co",
-      "image": "/images/team/thiago.webp",
+      "image": "/puntuale-nuxt/images/team/thiago.webp",
       "skills": [
         "Forecasting",
         "Schedule Modeling",

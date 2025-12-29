@@ -2,7 +2,7 @@
 title: Puntuale
 description: Time strategy studio for teams that ship on schedule and breathe again.
 tagline: Problems for all your solutions
-image: /images/hero.webp
+image: /puntuale-nuxt/images/hero.webp
 imageAlt: Strategy team reviewing a timeline wall.
 cta:
   primary:
@@ -43,15 +43,15 @@ services:
   items:
     - title: Calendar Intelligence
       description: We turn calendar chaos into a portfolio view of energy, urgency, and flow.
-      image: /images/services.webp
+      image: /puntuale-nuxt/images/services.webp
       imageAlt: Minimal desk scene with planner and coffee.
     - title: Decision Ceremonies
       description: Structured sessions that move decisions from draft to done in 48 hours.
-      image: /images/about.webp
+      image: /puntuale-nuxt/images/about.webp
       imageAlt: Team collaborating with notes and laptops.
     - title: Time Experience Design
       description: We craft how time feels across your product, customer, and internal teams.
-      image: /images/blog.webp
+      image: /puntuale-nuxt/images/blog.webp
       imageAlt: Colleagues walking through a bright office.
 ctaPanel:
   title: Ready for time to feel less expensive?
