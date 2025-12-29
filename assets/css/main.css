@@ -38,6 +38,15 @@ body {
   min-height: 100vh;
 }
 
+html {
+  margin: 0;
+  padding: 0;
+}
+
+#__nuxt > div:first-child:empty {
+  display: none;
+}
+
 a {
   color: inherit;
   text-decoration: none;
