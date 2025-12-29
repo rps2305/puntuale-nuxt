@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { data: site } = await useAsyncData('site-nav', () =>
-  queryCollection('content').path('/site').first(),
+  queryContent('/site').findOne(),
 );
 
 const isOpen = ref(false);

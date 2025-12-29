@@ -1,16 +1,29 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+const siteUrl = process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   appDir: '.',
+  app: {
+    baseURL: siteUrl.startsWith('http') ? new URL(siteUrl).pathname : '/',
+    head: {
+      htmlAttrs: {
+        lang: 'en',
+      },
+      meta: [
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      ],
+    },
+  },
   css: ['~/assets/css/main.css'],
   modules: [
     '@nuxt/content',
     '@nuxt/image',
     '@nuxt/fonts',
     '@nuxt/icon',
-    // '@nuxt/devtools',
-    // '@nuxtjs/eslint-module',
     'shadcn-nuxt',
   ],
   shadcn: {
@@ -49,6 +62,11 @@ export default defineNuxtConfig({
     prerender: {
       ignore: ['/_ipx'],
       failOnError: false,
+    },
+  },
+  runtimeConfig: {
+    public: {
+      siteUrl,
     },
   },
 })

@@ -3,7 +3,7 @@ const route = useRoute();
 const slug = route.params.slug as string;
 
 const { data: post } = await useAsyncData(`blog-${slug}`, () =>
-  queryCollection('content').path(`/blog/${slug}`).first(),
+  queryContent(`/blog/${slug}`).findOne(),
 );
 
 if (!post.value) {

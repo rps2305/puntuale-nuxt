@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { data: page } = await useAsyncData('cookies-page', () =>
-  queryCollection('content').path('/cookies').first(),
+  queryContent('/cookies').findOne(),
 );
 
 if (!page.value) {

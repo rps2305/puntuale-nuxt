@@ -3,12 +3,12 @@ const route = useRoute();
 const id = Number(route.params.id);
 
 const { data: projects } = await useAsyncData('projects-data', async () => {
-  const all = await queryCollection('content').all();
+  const all = await queryContent().find();
   return all.find((item) => item.stem === 'projects' && item.extension === 'json');
 });
 
 const projectList = computed(() => projects.value?.meta?.projects || []);
-const project = computed(() => projectList.value.find((p: any) => p.id === id));
+const project = computed(() => projectList.value.find((p: { id: number }) => p.id === id));
 
 if (!project.value) {
   throw createError({ statusCode: 404, statusMessage: 'Project not found' });

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { data: projects } = await useAsyncData('projects-data', async () => {
-  const all = await queryCollection('content').all();
+  const all = await queryContent().find();
   return all.find((item) => item.stem === 'projects' && item.extension === 'json');
 });
 

@@ -30,11 +30,37 @@ The dev server runs at `http://localhost:3000`.
 ## Useful Commands
 
 ```bash
-npm run dev       # Start dev server
-npm run build     # Production build
-npm run generate  # Static site generation
-npm run preview   # Preview production build
+npm run dev         # Start dev server
+npm run build       # Production build
+npm run generate    # Static site generation
+npm run preview     # Preview production build
+npm run typecheck   # TypeScript type checking
+npm run lint        # Run ESLint
+npm run lint:fix    # Fix ESLint issues
 ```
+
+## GitHub Pages Deployment
+
+The project is configured for automatic deployment to GitHub Pages via GitHub Actions.
+
+### Setup
+
+1. **Go to GitHub repository Settings → Pages**
+2. **Set Source to "GitHub Actions"**
+3. **Add repository secret `SITE_URL`:**
+   - For user/organization site: `https://your-username.github.io/`
+   - For project site: `https://your-username.github.io/repository-name/`
+4. **Push to `main` branch** to trigger deployment
+
+### Workflow Features
+
+- Automatic deployment on push to `main`
+- TypeScript type checking
+- ESLint validation
+- Static site generation
+- Manual deployment trigger available
+
+The workflow file is located at `.github/workflows/deploy.yml`.
 
 ## Project Structure
 

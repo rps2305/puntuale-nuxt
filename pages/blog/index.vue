@@ -1,10 +1,10 @@
 <script setup lang="ts">
 const { data: page } = await useAsyncData('blog-page', () =>
-  queryCollection('content').path('/blog').first(),
+  queryContent('/blog').findOne(),
 );
 
 const { data: posts } = await useAsyncData('blog-posts', async () => {
-  const all = await queryCollection('content').where({ path: { $startsWith: '/blog' } }).all();
+  const all = await queryContent('/blog').find();
   return all.filter((post) => post._path !== '/blog');
 });
 

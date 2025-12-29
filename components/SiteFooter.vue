@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { data: site } = await useAsyncData('site-footer', () =>
-  queryCollection('content').path('/site').first(),
+  queryContent('/site').findOne(),
 );
 
 const siteData = computed(() => site.value?.meta || {});

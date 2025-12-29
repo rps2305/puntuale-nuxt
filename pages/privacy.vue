@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { data: page } = await useAsyncData('privacy-page', () =>
-  queryCollection('content').path('/privacy').first(),
+  queryContent('/privacy').findOne(),
 );
 
 if (!page.value) {

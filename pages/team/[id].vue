@@ -3,7 +3,7 @@ const route = useRoute();
 const memberId = computed(() => route.params.id as string | undefined);
 
 const { data: team } = await useAsyncData('team-data', async () => {
-  const all = await queryCollection('content').all();
+  const all = await queryContent().find();
   return all.find((item) => item.stem === 'team' && item.extension === 'json');
 });
 

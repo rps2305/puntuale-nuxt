@@ -1,11 +1,11 @@
 <script setup lang="ts">
 const { data: page } = await useAsyncData('team-page', async () => {
-  const all = await queryCollection('content').all();
+  const all = await queryContent().find();
   return all.find((item) => item.stem === 'team' && item.extension === 'md');
 });
 
 const { data: team } = await useAsyncData('team-data', async () => {
-  const all = await queryCollection('content').all();
+  const all = await queryContent().find();
   return all.find((item) => item.stem === 'team' && item.extension === 'json');
 });
 

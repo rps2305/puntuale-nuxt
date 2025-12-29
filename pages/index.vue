@@ -1,7 +1,9 @@
 <script setup lang="ts">
-const page = queryContent('/index');
+const { data: page } = await useAsyncData('home-page', () =>
+  queryContent('/').findOne(),
+);
 
-if (!page) {
+if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Home page not found' });
 }
 

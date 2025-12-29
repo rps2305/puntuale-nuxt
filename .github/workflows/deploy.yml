@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -24,19 +25,21 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: |
-          npm install --legacy-peer-deps --prefer-offline --no-audit --no-fund
-          npm uninstall @oxc-minify/binding-darwin-arm64 @oxc-parser/binding-darwin-arm64 @oxc-transform/binding-darwin-arm64 @rollup/rollup-darwin-arm64 lightningcss-darwin-arm64
-          npm install --legacy-peer-deps @oxc-minify/binding-linux-x64-gnu @oxc-parser/binding-linux-x64-gnu @oxc-transform/binding-linux-x64-gnu @rollup/rollup-linux-x64-gnu lightningcss-linux-x64-gnu --save-optional
+        run: npm ci
+
+      - name: Run lint
+        run: npm run lint
 
       - name: Generate static site
         run: npm run generate
+        env:
+          NUXT_PUBLIC_SITE_URL: ${{ secrets.SITE_URL }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: .output/public
 

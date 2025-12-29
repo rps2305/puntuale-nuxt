@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { data: page } = await useAsyncData('disclaimer-page', () =>
-  queryCollection('content').path('/disclaimer').first(),
+  queryContent('/disclaimer').findOne(),
 );
 
 if (!page.value) {

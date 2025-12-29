@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { data: page } = await useAsyncData('contact', () =>
-  queryCollection('content').path('/contact').first(),
+  queryContent('/contact').findOne(),
 );
 
 if (!page.value) {
