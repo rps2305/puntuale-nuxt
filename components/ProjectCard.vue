@@ -20,7 +20,7 @@ defineProps<{
        loading="lazy"
        width="700"
        height="480"
-     />
+     >
     <div class="list-grid">
       <div class="project-meta">
         <span class="client">{{ client }}</span>

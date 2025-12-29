@@ -19,7 +19,7 @@ defineProps<{
        loading="lazy"
        width="700"
        height="480"
-     />
+     >
     <div class="list-grid">
       <span v-if="date" class="footer-note">{{ date }}</span>
       <h3>{{ title }}</h3>
