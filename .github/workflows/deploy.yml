@@ -32,8 +32,6 @@ jobs:
 
       - name: Generate static site
         run: npm run generate
-        env:
-          NUXT_PUBLIC_SITE_URL: ${{ secrets.SITE_URL }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

@@ -1,23 +1,7 @@
-const siteUrl = process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000'
-
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   appDir: '.',
-  app: {
-    baseURL: siteUrl.startsWith('http') ? new URL(siteUrl).pathname : '/',
-    head: {
-      htmlAttrs: {
-        lang: 'en',
-      },
-      meta: [
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      ],
-      link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      ],
-    },
-  },
   css: ['~/assets/css/main.css'],
   modules: [
     '@nuxt/content',
@@ -64,9 +48,17 @@ export default defineNuxtConfig({
       failOnError: false,
     },
   },
-  runtimeConfig: {
-    public: {
-      siteUrl,
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'en',
+      },
+      meta: [
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      ],
     },
   },
 })
