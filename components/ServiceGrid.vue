@@ -20,7 +20,7 @@ defineProps<{
       </div>
       <div class="card-grid">
         <article v-for="item in items" :key="item.title" class="media-card">
-          <img v-if="item.image" :src="item.image" :alt="item.title" loading="lazy" width="700" height="480">
+           <NuxtImg v-if="item.image" :src="item.image" :alt="item.imageAlt || item.title" loading="lazy" width="700" height="480" format="webp" />
           <div>
             <h3>{{ item.title }}</h3>
             <p>{{ item.description }}</p>
