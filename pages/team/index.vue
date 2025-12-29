@@ -1,7 +1,8 @@
 <script setup lang="ts">
 const { data: page } = await useAsyncData('team-page', async () => {
   try {
-    return await queryContent('/team').findOne();
+    const all = await queryContent().find();
+    return all.find((item) => item.stem === 'team' && item.extension === 'md');
   } catch (error) {
     console.warn('Team page not found:', error);
     return null;
@@ -40,10 +41,10 @@ useHead({
 </script>
 
 <template>
-  <div v-if="page">
+  <div>
     <ContentHero
-      :title="page.title"
-      :description="page.description"
+      :title="page?.title || 'Team'"
+      :description="page?.description || 'Our team'"
       :tagline="tagline"
       :image="image"
       :image-alt="imageAlt"
@@ -63,6 +64,8 @@ useHead({
         </div>
       </div>
     </section>
-    <TeamGrid v-if="teamMembers.length" :members="teamMembers" />
+    <TeamGrid :members="teamMembers" />
+    <!-- Debug info -->
+    <div style="display: none;">{{ teamMembers.length }} members loaded</div>
   </div>
 </template>

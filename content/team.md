@@ -2,7 +2,7 @@
 title: Team Puntuale
 description: A cross-disciplinary crew who designs time like a product.
 tagline: Problems for all your solutions
-image: /images/hero.webp
+image: /puntuale-nuxt/images/hero.webp
 imageAlt: Team gathered around a planning wall.
 cta:
   primary:
