@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   modules: [
     '@nuxt/content',
-    '@nuxt/image',
+    // '@nuxt/image',
     '@nuxt/fonts',
     '@nuxt/icon',
     'shadcn-nuxt',
@@ -15,9 +15,8 @@ export default defineNuxtConfig({
   },
   content: {},
   image: {
-    format: ['webp'],
     quality: 80,
-    presets: {
+  presets: {
       hero: {
         modifiers: { format: 'webp', width: 1400, height: 900, fit: 'cover' },
       },

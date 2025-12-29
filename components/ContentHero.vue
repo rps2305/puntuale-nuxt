@@ -38,8 +38,8 @@ defineProps<{
           </NuxtLink>
         </div>
       </div>
-      <div v-if="image" class="hero-media">
-        <NuxtImg :src="image" preset="hero" :alt="imageAlt || title" />
+       <div v-if="image" class="hero-media">
+        <img :src="image" :alt="imageAlt || title" width="1400" height="900">
       </div>
     </div>
   </section>

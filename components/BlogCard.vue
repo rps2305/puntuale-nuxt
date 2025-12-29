@@ -12,13 +12,14 @@ defineProps<{
 
 <template>
   <NuxtLink :to="href" class="blog-card">
-    <NuxtImg
-      v-if="image"
-      :src="image"
-      preset="card"
-      :alt="imageAlt || title"
-      loading="lazy"
-    />
+     <img
+       v-if="image"
+       :src="image"
+       :alt="imageAlt || title"
+       loading="lazy"
+       width="700"
+       height="480"
+     />
     <div class="list-grid">
       <span v-if="date" class="footer-note">{{ date }}</span>
       <h3>{{ title }}</h3>

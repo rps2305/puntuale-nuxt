@@ -43,7 +43,7 @@ html {
   padding: 0;
 }
 
-#__nuxt > div:first-child:empty {
+#__nuxt > div:first-child:not(.page):empty {
   display: none;
 }
 
