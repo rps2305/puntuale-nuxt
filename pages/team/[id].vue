@@ -7,7 +7,7 @@ const { data: team } = await useAsyncData('team-data', async () => {
   return all.find((item) => item.stem === 'team' && item.extension === 'json');
 });
 
-const teamMembers = computed(() => team.value?.meta?.members || []);
+const teamMembers = computed(() => team.value?.members || []);
 const member = computed(() => teamMembers.value.find((m) => m.id === memberId.value));
 
 if (memberId.value && !member.value) {

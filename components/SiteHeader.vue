@@ -4,7 +4,7 @@ const { data: site } = await useAsyncData('site-nav', () =>
 );
 
 const isOpen = ref(false);
-const siteData = computed(() => site.value?.meta || {});
+const siteData = computed(() => site.value || {});
 </script>
 
 <template>

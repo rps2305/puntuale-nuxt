@@ -7,7 +7,7 @@ const { data: projects } = await useAsyncData('projects-data', async () => {
   return all.find((item) => item.stem === 'projects' && item.extension === 'json');
 });
 
-const projectList = computed(() => projects.value?.meta?.projects || []);
+const projectList = computed(() => projects.value?.projects || []);
 const project = computed(() => projectList.value.find((p: { id: number }) => p.id === id));
 
 if (!project.value) {

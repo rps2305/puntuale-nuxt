@@ -3,7 +3,7 @@ const { data: site } = await useAsyncData('site-footer', () =>
   queryContent('/site').findOne(),
 );
 
-const siteData = computed(() => site.value?.meta || {});
+const siteData = computed(() => site.value || {});
 const footerData = computed(() => siteData.value.footer || {});
 </script>
 

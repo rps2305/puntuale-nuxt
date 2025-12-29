@@ -8,11 +8,11 @@ if (!projects.value) {
   throw createError({ statusCode: 404, statusMessage: 'Projects page not found' });
 }
 
-const cta = computed(() => projects.value?.meta?.cta);
-const image = computed(() => projects.value?.meta?.image);
-const imageAlt = computed(() => projects.value?.meta?.imageAlt);
-const tagline = computed(() => projects.value?.meta?.tagline);
-const projectList = computed(() => projects.value?.meta?.projects || []);
+const cta = computed(() => projects.value?.cta);
+const image = computed(() => projects.value?.image);
+const imageAlt = computed(() => projects.value?.imageAlt);
+const tagline = computed(() => projects.value?.tagline);
+const projectList = computed(() => projects.value?.projects || []);
 
 useHead({
   title: `${projects.value?.meta?.title} | Puntuale`,
