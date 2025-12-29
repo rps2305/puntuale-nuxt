@@ -15,11 +15,11 @@ const tagline = computed(() => projects.value?.tagline);
 const projectList = computed(() => projects.value?.projects || []);
 
 useHead({
-  title: `${projects.value?.meta?.title} | Puntuale`,
+  title: `${projects.value?.title} | Puntuale`,
   meta: [
-    { name: 'description', content: projects.value?.meta?.description || '' },
-    { property: 'og:title', content: projects.value?.meta?.title },
-    { property: 'og:description', content: projects.value?.meta?.description || '' },
+    { name: 'description', content: projects.value?.description || '' },
+    { property: 'og:title', content: projects.value?.title },
+    { property: 'og:description', content: projects.value?.description || '' },
   ],
 });
 </script>
