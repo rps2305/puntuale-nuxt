@@ -39,7 +39,7 @@ defineProps<{
         </div>
       </div>
         <div v-if="image" class="hero-media">
-         <NuxtImg :src="image" :alt="imageAlt || title" width="1400" height="900" format="webp" />
+         <NuxtImg :src="image" :alt="imageAlt || title" width="1400" format="webp" />
        </div>
     </div>
   </section>

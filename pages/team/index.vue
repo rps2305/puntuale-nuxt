@@ -1,23 +1,7 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData('team-page', async () => {
-  try {
-    const all = await queryContent().find();
-    return all.find((item) => item.stem === 'team' && item.extension === 'md');
-  } catch (error) {
-    console.warn('Team page not found:', error);
-    return null;
-  }
-});
-
-const { data: team } = await useAsyncData('team-data', async () => {
-  try {
-    const all = await queryContent().find();
-    return all.find((item) => item.stem === 'team' && item.extension === 'json');
-  } catch (error) {
-    console.warn('Team data not found:', error);
-    return null;
-  }
-});
+const { data: page } = await useAsyncData('team-page', () =>
+  queryContent('/team').findOne(),
+);
 
 // Handle missing content gracefully during prerendering
 if (!page.value && import.meta.server) {
@@ -28,7 +12,7 @@ const cta = computed(() => page.value?.cta);
 const image = computed(() => page.value?.image);
 const imageAlt = computed(() => page.value?.imageAlt);
 const tagline = computed(() => page.value?.tagline);
-const teamMembers = computed(() => team.value?.members || []);
+const teamMembers = computed(() => page.value?.members || []);
 
 useHead({
   title: `${page.value?.title || 'Team'} | Puntuale`,

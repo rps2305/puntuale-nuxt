@@ -19,7 +19,6 @@ defineProps<{
         :alt="imageAlt || title"
         loading="lazy"
         width="700"
-        height="480"
         format="webp"
       />
     <div class="list-grid">

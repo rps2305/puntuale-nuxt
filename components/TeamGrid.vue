@@ -16,7 +16,7 @@ defineProps<{
           :to="`/team/${member.id}`"
           class="team-card"
         >
-           <NuxtImg :src="member.image" :alt="member.name" loading="lazy" width="480" height="600" format="webp" />
+           <NuxtImg :src="member.image" :alt="member.name" loading="lazy" width="480" format="webp" />
           <h3>{{ member.name }}</h3>
           <p>{{ member.role }}</p>
           <p class="footer-note">{{ member.department }}</p>
