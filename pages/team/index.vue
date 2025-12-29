@@ -31,11 +31,11 @@ const tagline = computed(() => page.value?.tagline);
 const teamMembers = computed(() => team.value?.members || []);
 
 useHead({
-  title: `${page.value.title} | Puntuale`,
+  title: `${page.value?.title || 'Team'} | Puntuale`,
   meta: [
-    { name: 'description', content: page.value.description || '' },
-    { property: 'og:title', content: page.value.title },
-    { property: 'og:description', content: page.value.description || '' },
+    { name: 'description', content: page.value?.description || 'Our team' },
+    { property: 'og:title', content: page.value?.title || 'Team' },
+    { property: 'og:description', content: page.value?.description || 'Our team' },
   ],
 });
 </script>
